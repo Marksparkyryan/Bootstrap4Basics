@@ -18,7 +18,7 @@
     />
   </head>
 
-  <body>
+  <body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
@@ -67,7 +67,7 @@
         <h1 class="display-2">Full Stack Conf</h1>
         <p class="lead">A One-day Conference About All Things Javascript.</p>
         <div class="btn-group mt-4" role="group" aria-label="Callout buttons">
-          <button type="button" class="btn btn-primary btn-lg">
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#register">
             Register Now
           </button>
           <a class="btn btn-light btn-lg" href="#speakers">See Speakers</a>
@@ -78,7 +78,7 @@
 
     <div class="container pt-4">
       <!-- about -->
-      <div class="row">
+      <div class="row" id="about">
         <div class="col-lg order-lg-2">
           <h3 class="mb-4">About Full Stack Conf</h3>
           <img
@@ -115,14 +115,14 @@
         </div>
         <div class="col-lg order-lg-3">
           <h3 class="mb-4">What You'll Learn</h3>
-          <ul>
-            <li><strong>MongoDB</strong>: NoSQL database</li>
-            <li><strong>Express</strong>: Framework for Node</li>
-            <li><strong>React</strong>: JavaScript library</li>
-            <li><strong>Node.js</strong>: JavaScript environment</li>
-            <li><strong>ES2015</strong>: Latest version of JavaScript</li>
-            <li><strong>Babel</strong>: JavaScript compiler</li>
-          </ul>
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action"><strong>MongoDB</strong>: NoSQL database</a>
+            <a href="#" class="list-group-item list-group-item-action"><strong>Express</strong>: Framework for Node</a>
+            <a href="#" class="list-group-item list-group-item-action"><strong>React</strong>: JavaScript library</a>
+            <a href="#" class="list-group-item list-group-item-action"><strong>Node.js</strong>: JavaScript environment</a>
+            <a href="#" class="list-group-item list-group-item-action"><strong>ES2015</strong>: Latest version of JavaScript</a>
+            <a href="#" class="list-group-item list-group-item-action"><strong>Babel</strong>: JavaScript compiler</a>
+          </div>
         </div>
       </div>
       <!-- /.about -->
@@ -131,18 +131,115 @@
       <h1 class="display-4 text-center my-5 text-muted" id="speakers">
         Speakers
       </h1>
-      [speaker bios go here]
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card mb-3">
+            <img src="img/vivianne.png" class="card-img-top" alt="Vivianne">
+            <div class="card-body">
+              <h4 class="card-title">Vivianne McVue</h4>
+              <p class="card-text">Vivianne is a web developer and teacher who is passionate about building scalable,
+                data-driven web apps, especially ones that address old problems with new tech!</p>
+            </div>
+          </div>
+        </div>
+      
+        
+          <div class="col-md-6">
+            <div class="card mb-3">
+              <img src="img/nodestradamus.png" class="card-img-top" alt="Nodestradamus">
+              <div class="card-body">
+                <h4 class="card-title">NodeStradamus</h4>
+                <p class="card-text">"NodeStra" is a software engineer and philosopher trying to leave the world better than he
+                  found it. He codes for non-profits, eCommerce, and large-scale web apps.</p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-md-6">
+              <div class="card mb-3">
+                  <img src="img/nodestradamus.png" class="card-img-top" alt="Nodestradamus">
+                  <div class="card-body">
+                    <h4 class="card-title">NodeStradamus</h4>
+                    <p class="card-text">"NodeStra" is a software engineer and philosopher trying to leave the world better than he
+                      found it. He codes for non-profits, eCommerce, and large-scale web apps.</p>
+                  </div>
+                </div>
+          </div>
+        
+          <div class="col-md-6">
+              <div class="card mb-3">
+                  <img src="img/nodestradamus.png" class="card-img-top" alt="Nodestradamus">
+                  <div class="card-body">
+                    <h4 class="card-title">NodeStradamus</h4>
+                    <p class="card-text">"NodeStra" is a software engineer and philosopher trying to leave the world better than he
+                      found it. He codes for non-profits, eCommerce, and large-scale web apps.</p>
+                  </div>
+                </div>
+          </div>
+        
+          <div class="col-md-6">
+              <div class="card mb-3">
+                  <img src="img/nodestradamus.png" class="card-img-top" alt="Nodestradamus">
+                  <div class="card-body">
+                    <h4 class="card-title">NodeStradamus</h4>
+                    <p class="card-text">"NodeStra" is a software engineer and philosopher trying to leave the world better than he
+                      found it. He codes for non-profits, eCommerce, and large-scale web apps.</p>
+                  </div>
+                </div>
+          </div>
+        
+          <div class="col-md-6">
+              <div class="card mb-3">
+                  <img src="img/nodestradamus.png" class="card-img-top" alt="Nodestradamus">
+                  <div class="card-body">
+                    <h4 class="card-title">NodeStradamus</h4>
+                    <p class="card-text">"NodeStra" is a software engineer and philosopher trying to leave the world better than he
+                      found it. He codes for non-profits, eCommerce, and large-scale web apps.</p>
+                  </div>
+                </div>
+          </div>
+        </div>
       <!-- /.speaker -->
 
       <!-- schedule -->
-      <h1 class="display-4 text-center my-5 text-muted">Schedule</h1>
-      [conference schedule goes here]
+      <h1 class="display-4 text-center my-5 text-muted" id="schedule">Schedule</h1>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <div class="d-flex justify-content-between">
+            <h5 class="mb-1">Keynote: Internet of Things</h5>
+            <span class="badge badge-info badge-pill p-2">9:00am</span>
+          </div>
+          <p class="mb-1">NodeStradamus</p>
+        </li>
+        <li class="list-group-item">
+            <div class="d-flex justify-content-between">
+              <h5 class="mb-1">React Basics</h5>
+              <span class="badge badge-info badge-pill p-2">10:00am</span>
+            </div>
+            <p class="mb-1">Vivianne McVue</p>
+          </li>
+          <li class="list-group-item">
+              <div class="d-flex justify-content-between">
+                <h5 class="mb-1">Hey Mongo</h5>
+                <span class="badge badge-info badge-pill p-2">11:00am</span>
+              </div>
+              <p class="mb-1">Jay Query</p>
+            </li>
+            <li class="list-group-item list-group-item-success">
+                <div class="d-flex justify-content-between">
+                  <h5 class="mb-1">Lunch</h5>
+                  <span class="badge badge-info badge-pill p-2">12:00pm</span>
+                </div>
+                <p class="mb-1">Free pizza for everyone!</p>
+              </li>
+      </ul>
       <!-- /.schedule -->
 
       <!-- callout button -->
       <button
         type="button"
-        class="btn btn-outline-info btn-lg d-block mx-auto my-5"
+        class="btn btn-outline-info btn-lg d-block mx-auto my-5" 
+        data-toggle="modal" data-target="#register"
       >
         Don't Miss Out, Register Now!
       </button>
@@ -215,6 +312,28 @@
     </div>
     <!-- /.container -->
 
+    <!-- Form Modal -->
+  <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="register form" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Register for Full Stack Conf</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Form goes here...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- /Form Modal -->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -233,4 +352,32 @@
       crossorigin="anonymous"
     ></script>
   </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
 </html>
